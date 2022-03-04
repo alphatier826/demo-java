@@ -32,4 +32,10 @@ public class ApplicationController {
 	public Course getCourse(@PathVariable String courseId) {
 		return this.cs.getCourse(Long.parseLong(courseId));
 	}
+	
+	// Get the course based on ID
+		@GetMapping("/courses/{courseId}")
+		public Course getLCourse(@PathVariable String courseId) {
+			return this.cs.getCourse(Long.parseLong(courseId));
+		}
 }
